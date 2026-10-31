@@ -1,0 +1,91 @@
+/* Neutral chrome only: station scenes retain their individual palettes. */
+.intro,
+#help-dialog,
+body > footer,
+.guide-card,
+.discovery {
+  background: #fffaf0;
+  color: #111;
+  border-color: #d8c9ac;
+}
+.intro {
+  /* A further 15% reduction from the previous introduction size. */
+  --interface-text-scale: 0.884;
+  background: #fffaf0;
+  padding: 24px;
+  border: 1px solid #e0d1b7;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px #45351a12;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100dvh - 310px);
+  overflow-y: auto;
+  pointer-events: auto;
+}
+.intro :is(h1, em, p, .eyebrow, .intro-note),
+#help-dialog :is(h2, p, .eyebrow, button),
+body > footer *,
+.guide-card *,
+.discovery * {
+  color: #111;
+}
+.intro .primary,
+#help-dialog button,
+kbd {
+  background: #f3e2c2;
+  color: #111;
+  border: 1px solid #cbbb9c;
+}
+.intro .eyebrow > span,
+.controls i,
+#dots span.found {
+  background: #111;
+}
+#dots span { background: #dfcfb1; }
+.guide-card .portrait { background: #f3e2c2; }
+
+/* All non-dashboard text modules share the same light-cream / black palette.
+   Explicit selectors keep the six station dashboards untouched. */
+.chat,
+.chat .chat-head,
+.chat .messages,
+.chat .message.user,
+.chat form,
+.chat input,
+.chat button,
+.bubble,
+#toast,
+.landmark-label strong,
+.landmark-label small,
+body > header .brand-icon,
+body > header .icon-button {
+  background: #fffaf0;
+  color: #111;
+  border-color: #e3d8c4;
+}
+.chat *,
+.bubble *,
+.landmark-label,
+body > header,
+body > header .brand-icon span,
+body > header .weather,
+body > header .weather span {
+  color: #111;
+}
+.chat input::placeholder { color: #111; opacity: 0.65; }
+.bubble::after { border-top-color: #fffaf0; }
+.chat,
+.bubble,
+#toast { box-shadow: 0 8px 28px #45351a20; }
+.chat button:hover,
+.intro .primary:hover,
+body > header .icon-button:hover { background: #f3e7d0; }
+.chat input:focus-visible,
+.intro button:focus-visible,
+body > header :focus-visible { outline-color: #111; }
+@media (max-width: 600px) {
+  .intro { padding: 16px; }
+}
+@media (max-width: 700px) {
+  .intro { max-height: calc(100dvh - 195px); }
+  body:not(.exploring) .discovery { display: none; }
+}

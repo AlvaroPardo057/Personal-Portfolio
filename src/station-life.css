@@ -1,0 +1,231 @@
+/* Only the cycling and reactor experiences receive this visual refinement. */
+.panel.station-experience.living-stage[data-section-id="hobbies"] {
+  width: 640px;
+  max-height: 700px;
+  border-radius: 25px 45px 25px 35px;
+  background: linear-gradient(170deg, #c9e8f2, #edf4de 60%, #e5eed8);
+  box-shadow:
+    0 22px 48px #29524033,
+    inset 0 0 0 1px #ffffffaa;
+}
+.living-stage .stage-introduction {
+  margin: 5px 0 17px;
+  font-size: 12px;
+}
+.living-stage .stage-profile {
+  height: 330px;
+  margin: 0 -22px;
+}
+.living-stage .stage-profile .experience-drawing {
+  border-radius: 0 0 16px 16px;
+}
+.living-stage .summit {
+  gap: 3px;
+}
+.living-stage .summit strong {
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  border-radius: 999px;
+  background: #fff9eae8;
+  color: #294d3d;
+  border: 1px solid #c7d4b8;
+  padding: 5px 10px;
+  box-shadow: 0 4px 9px #284a3820;
+}
+.living-stage .summit-flag {
+  padding: 4px 7px;
+  border-radius: 0 8px 8px 0;
+  background: #e5a349;
+  color: #543a21;
+  border-left-color: #4b6650;
+  transform-origin: 0 50%;
+  animation: flag-breeze 5s ease-in-out infinite;
+}
+.living-stage .summit:nth-of-type(2) .summit-flag {
+  animation-delay: -2s;
+}
+.living-stage .summit::after {
+  height: 16px;
+  border-left-color: #4b6650;
+}
+.living-stage .stage-finish {
+  font-size: 8px;
+  padding: 13px 0 3px;
+  opacity: 0.7;
+}
+.stage-clouds {
+  animation: stage-cloud-drift 17s ease-in-out infinite alternate;
+}
+.stage-birds {
+  animation: stage-bird-drift 13s ease-in-out infinite alternate;
+}
+.stage-road-marking {
+  animation: stage-road-flow 8s linear infinite;
+}
+@keyframes flag-breeze {
+  0%,
+  100% {
+    transform: skewY(-3deg);
+  }
+  50% {
+    transform: skewY(3deg);
+  }
+}
+@keyframes stage-cloud-drift {
+  to {
+    transform: translateX(17px);
+  }
+}
+@keyframes stage-bird-drift {
+  to {
+    transform: translate(15px, -5px);
+  }
+}
+@keyframes stage-road-flow {
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+.panel.station-experience.living-reactor[data-section-id="interests"] {
+  --experience-ink: #d6eee6;
+  --experience-line: #477475;
+  width: 640px;
+  max-height: 700px;
+  border-radius: 24px 12px 24px 12px;
+  background: linear-gradient(150deg, #1b3945, #16323f 55%, #244a51);
+  border: 2px solid #6c9290;
+  box-shadow:
+    0 22px 48px #152b3544,
+    inset 0 0 0 5px #173640;
+}
+.living-reactor .reactor-chamber {
+  height: 355px;
+  margin: 4px -12px 0;
+}
+.panel.living-reactor .reactor-node {
+  max-width: 145px;
+  font-size: 11px;
+  padding: 9px 12px;
+  border: 1px solid #85bcb1;
+  border-radius: 10px;
+  background: linear-gradient(#254f59f5, #173b46f5);
+  color: #e2f5eb;
+  box-shadow:
+    0 4px 8px #0a202855,
+    inset 0 1px #ffffff12;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.panel.living-reactor .reactor-node:hover {
+  background: #346973;
+  box-shadow: 0 0 12px #8edbd044;
+}
+.panel.living-reactor .reactor-node[aria-pressed="true"] {
+  background: #c4e6d5;
+  color: #153b43;
+  border-color: #fff1b9;
+}
+.living-reactor .reactor-readout {
+  position: relative;
+  border: 1px solid #497576;
+  border-radius: 9px;
+  background: #12333dcc;
+  color: #cfebe1;
+  padding: 13px;
+  margin-top: 11px;
+  min-height: 43px;
+  font-size: 12px;
+}
+.living-reactor .reactor-readout::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a9dcc3;
+  margin: 0 8px 1px 0;
+}
+.reactor-aura {
+  animation: core-breath 5s ease-in-out infinite;
+}
+.reactor-beam {
+  animation: beam-breath 4s ease-in-out infinite;
+}
+.reactor-particles circle {
+  animation: core-particle-rise 5s linear infinite;
+  animation-delay: var(--particle-delay);
+}
+.reactor-energy {
+  animation: reactor-energy-flow 4s linear infinite;
+}
+.reactor-status-light {
+  animation: room-status 6s ease-in-out infinite;
+}
+.reactor-monitor-trace {
+  animation: room-status 4s ease-in-out infinite alternate;
+}
+.reactor-engaged .reactor-beam {
+  filter: brightness(1.25);
+}
+@keyframes core-breath {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes beam-breath {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes core-particle-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-106px);
+    opacity: 0;
+  }
+}
+@keyframes reactor-energy-flow {
+  to {
+    stroke-dashoffset: -52;
+  }
+}
+@keyframes room-status {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .living-stage *,
+  .living-reactor * {
+    animation: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .panel.station-experience.living-stage[data-section-id="hobbies"],
+  .panel.station-experience.living-reactor[data-section-id="interests"] {
+    width: 610px;
+  }
+}

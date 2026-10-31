@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#eff3e8" />
+    <meta
+      name="description"
+      content="A little world of engineering, curiosity and possibility. Explore Álvaro's interactive portfolio."
+    />
+    <title>Álvaro's world · A place for curiosity</title>
+  </head>
+  <body>
+    <div id="world" aria-label="Interactive portfolio world"></div>
+    <div id="labels"></div>
+    <header>
+      <a class="brand" href="/" aria-label="Home"
+        ><span class="brand-icon">a<span>✳</span></span>
+        <div>Álvaro’s world<small>A PLACE FOR CURIOSITY</small></div></a
+      >
+      <div class="header-right">
+        <span class="weather">☀ <span>A good day to explore</span></span
+        ><button
+          id="sound"
+          class="icon-button"
+          aria-label="Enable speaking sounds"
+          aria-pressed="false"
+        >
+          ♫</button
+        ><button id="help" class="icon-button" aria-label="Show controls">
+          ?
+        </button>
+      </div>
+    </header>
+    <section class="intro">
+      <div class="eyebrow"><span></span> ENGINEERING MEETS IMAGINATION</div>
+      <h1>A little world.<br />A lot of <em>possibility.</em></h1>
+      <p>
+        Hi, I’m Álvaro. Welcome to my corner of the internet.<br />Take a walk
+        through the things that move me.
+      </p>
+      <button id="explore" class="primary">Let’s explore <span>↗</span></button>
+      <div class="intro-note">No wrong turns. Just follow your curiosity.</div>
+    </section>
+    <aside class="discovery">
+      <span class="eyebrow">YOUR LITTLE ADVENTURE</span>
+      <div><strong id="count">0 / 6</strong><span>places discovered</span></div>
+      <div id="dots"></div>
+    </aside>
+    <aside class="guide-card">
+      <div class="portrait">✦</div>
+      <div>
+        <strong>A familiar face, a friendly guide.</strong>
+        <p>Walk up to Álvaro to start a conversation.</p>
+        <span>● LOCAL DEMO · BACKEND READY</span>
+      </div>
+    </aside>
+    <footer>
+      <div class="controls">
+        <span
+          ><kbd>W</kbd
+          ><span class="keys"><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></span
+        ><span>Move around</span><i></i><span class="mouse">↔</span
+        ><span>Drag to look</span><i></i><span>✧</span
+        ><span>Get close to discover</span>
+      </div>
+      <span class="footer-note"
+        >Made of ideas & a little wonder <span>✳</span></span
+      >
+    </footer>
+    <div id="joystick" aria-label="Touch movement control"><div></div></div>
+    <div id="toast" role="status"></div>
+    <dialog id="help-dialog">
+      <button class="close" aria-label="Close help">×</button>
+      <div class="eyebrow">MAKE YOURSELF AT HOME</div>
+      <h2>A world worth wandering.</h2>
+      <p>
+        Use WASD or arrow keys to walk. Drag the scenery to turn the camera. On
+        a phone, use the thumbstick to move and drag elsewhere to look.
+      </p>
+      <p>
+        Walk close to a station to discover About Me, Interests, Projects,
+        Education, Contact or Hobbies. Use “Keep exploring” on a page to ask
+        Álvaro to lead you to a related station.
+      </p>
+      <p>
+        Approach Álvaro to chat. Ask him about a place and he’ll lead you there.
+        Speaking sounds are optional.
+      </p>
+      <button id="reset" class="primary">Back to the plaza ↗</button>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

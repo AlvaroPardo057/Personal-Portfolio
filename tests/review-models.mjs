@@ -1,0 +1,10 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({headless:true,...(process.platform==='win32'?{executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'}:{}),args:['--no-sandbox','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1800,height:1200}});page.setDefaultTimeout(30000);
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:5175/tests/model-review.html');
+await page.waitForFunction(()=>window.modelReview);
+await page.screenshot({path:'test-results/models-detailed.png'});
+await page.screenshot({path:'test-results/character-closeup.jpg',type:'jpeg',quality:62,clip:{x:900,y:600,width:900,height:600}});
+console.log(JSON.stringify({errors,models:await page.evaluate(()=>window.modelReview.cells.map(({object})=>({id:object.userData.landmarkId||'character',meshes:(()=>{let n=0;object.traverse(o=>{if(o.isMesh)n++});return n})()})))}));
+await browser.close();if(errors.length)process.exitCode=1;

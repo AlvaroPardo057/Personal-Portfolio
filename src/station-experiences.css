@@ -1,0 +1,427 @@
+.panel.station-experience[data-section-id] {
+  width: 600px;
+  max-height: 660px;
+  padding: 22px;
+  border: 0;
+  border-radius: 25px;
+  background: var(--experience-bg);
+  color: var(--experience-ink);
+  box-shadow: 0 22px 50px #15222a45;
+}
+.panel.station-experience[data-section-id]::before,
+.panel.station-experience[data-section-id]::after {
+  display: none;
+}
+.panel.station-experience[data-section-id] .panel-header h2,
+.panel.station-experience[data-section-id] .panel-station-identity .tag,
+.panel.station-experience[data-section-id] .panel-subtitle,
+.panel.station-experience[data-section-id] .content-meta,
+.panel.station-experience[data-section-id] .panel-station-index {
+  color: var(--experience-ink);
+}
+.panel.station-experience .panel-station-rule {
+  display: none;
+}
+.panel.station-experience .panel-masthead {
+  min-height: 18px;
+}
+.panel.station-experience .panel-station-identity {
+  flex-direction: row;
+  gap: 12px;
+  opacity: 0.65;
+}
+.panel.station-experience .panel-header {
+  margin-bottom: 5px;
+}
+.panel.station-experience .panel-related {
+  margin-top: 15px;
+  border-color: var(--experience-line);
+}
+.panel.station-experience[data-section-id] .related-link {
+  background: transparent;
+  color: var(--experience-ink);
+  border-color: var(--experience-line);
+}
+.station-world {
+  position: relative;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.station-world:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.experience-drawing {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.experience-caption {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.panel.station-experience .station-world p {
+  color: inherit;
+}
+
+/* The circuit is the interface: each stop reveals a piece of the biography. */
+.panel.station-experience[data-section-id="about-me"] {
+  --experience-bg: #171d25;
+  --experience-ink: #f6f3ed;
+  --experience-line: #48505b;
+  border-radius: 28px 6px 28px 6px;
+  background: radial-gradient(ellipse at 50% 45%, #28303d, #171d25 70%);
+}
+.circuit-map {
+  position: relative;
+  height: 250px;
+}
+.panel.station-experience .track-stop {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ff6656;
+  border-radius: 50%;
+  padding: 0;
+  background: #171d25;
+  color: white;
+  font-weight: 800;
+  font-size: 11px;
+  box-shadow: 0 0 0 5px #171d2566;
+}
+.panel.station-experience .track-stop[aria-pressed="true"] {
+  background: #ff6656;
+  color: #171d25;
+}
+.track-information {
+  padding: 10px 18px;
+  border-left: 3px solid #ff6656;
+  min-height: 115px;
+}
+.track-information h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+.track-information p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.panel.station-experience[data-section-id="about-me"] .content-quote {
+  background: none;
+  color: inherit;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 5px 0;
+}
+.panel.station-experience[data-section-id="about-me"]
+  .content-quote
+  figcaption {
+  color: #abb3bf;
+}
+
+/* The stage profile carries the hobbies on its mountain summits. */
+.panel.station-experience[data-section-id="hobbies"] {
+  --experience-bg: #edf6e8;
+  --experience-ink: #234c39;
+  --experience-line: #a7c6ad;
+  border-radius: 28px 55px 20px 40px;
+  background: linear-gradient(#cceafb, #f4faef 53%);
+}
+.stage-introduction {
+  margin: 8px 0 35px;
+}
+.stage-profile {
+  position: relative;
+  height: 285px;
+}
+.summit {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.summit strong {
+  white-space: nowrap;
+  font-size: 16px;
+}
+.summit-flag {
+  background: #ea9a40;
+  color: #3a3421;
+  padding: 4px 7px;
+  font-size: 9px;
+  font-weight: 800;
+  border-radius: 3px 9px 9px 0;
+  border-left: 2px solid #234c39;
+}
+.summit::after {
+  content: "";
+  height: 18px;
+  border-left: 2px solid #234c39;
+}
+.stage-finish {
+  padding: 8px 0;
+  font-size: 9px;
+  letter-spacing: 2px;
+  display: block;
+  text-align: center;
+}
+
+/* Education is an open volume: qualifications occupy facing pages. */
+.panel.station-experience[data-section-id="education"] {
+  --experience-bg: #634936;
+  --experience-ink: #f9e8c8;
+  --experience-line: #ab8868;
+  width: 650px;
+  border-radius: 10px 24px 24px 10px;
+  background: linear-gradient(110deg, #72533d, #4c362b);
+}
+.open-book {
+  display: flex;
+  min-height: 280px;
+  padding: 7px 5px 12px;
+}
+.book-page {
+  position: relative;
+  width: 50%;
+  padding: 23px 18px 35px;
+  color: #59432d;
+  background: #f8edcf;
+}
+.page-left {
+  border-radius: 5px 30px 5px 5px;
+  background: linear-gradient(90deg, #f8edcf 85%, #d9c59e);
+  box-shadow: -4px 4px 0 #d9c59e;
+}
+.page-right {
+  border-radius: 30px 5px 5px 5px;
+  background: linear-gradient(90deg, #d9c59e, #fff4d9 12%);
+  box-shadow: 4px 4px 0 #d9c59e;
+}
+.page-number {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  font:
+    11px Georgia,
+    serif;
+}
+.panel.station-experience[data-section-id="education"] .content-card {
+  background: transparent;
+  border: 0;
+  padding: 15px 0;
+  color: #59432d;
+}
+.panel.station-experience[data-section-id="education"] .content-card h4 {
+  font:
+    700 21px Georgia,
+    serif;
+  color: #59432d;
+}
+.panel.station-experience[data-section-id="education"] .content-subtitle {
+  color: #81654b;
+}
+.panel.station-experience[data-section-id="education"] .note-details summary {
+  color: #81654b;
+}
+.panel.station-experience[data-section-id="education"] textarea {
+  background: #fff8e8;
+}
+
+/* Projects are books physically resting on shelves. */
+.panel.station-experience[data-section-id="projects"] {
+  --experience-bg: #68442f;
+  --experience-ink: #fff0d4;
+  --experience-line: #a47a53;
+  background: repeating-linear-gradient(
+    90deg,
+    #6a4834 0 65px,
+    #68442f 66px 68px
+  );
+  border: 9px solid #95663e;
+  border-radius: 8px;
+}
+.library-introduction {
+  margin: 5px 0 15px;
+}
+.library-shelves {
+  padding: 0 10px;
+  background: #35261e44;
+}
+.project-shelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  padding: 14px 8px 0;
+  min-height: 175px;
+  border-bottom: 13px solid #b5814e;
+  box-shadow: 0 9px 9px #23180f55;
+}
+.decorative-spine {
+  flex: 0 0 20px;
+  height: calc(84px + mod(var(--spine-index), 3) * 18px);
+  min-height: 90px;
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(90deg, #709c85, #315347);
+  border-top: 9px double #e2c48b;
+  border-bottom: 9px double #e2c48b;
+  transform: rotate(-3deg);
+}
+.decorative-spine:nth-child(3n) {
+  background: linear-gradient(90deg, #bc7860, #82433c);
+}
+.decorative-spine:nth-child(2n) {
+  background: linear-gradient(90deg, #cba767, #98743e);
+  transform: rotate(4deg);
+}
+.panel.station-experience[data-section-id="projects"] .project-volume {
+  flex: 1;
+  min-width: 0;
+  min-height: 160px;
+  border: 0;
+  border-left: 10px solid #315466;
+  border-radius: 4px 10px 0 0;
+  padding: 20px 16px;
+  background: linear-gradient(110deg, #42768b, #274755);
+  color: #fff0d4;
+  box-shadow: 4px 0 4px #0003;
+}
+.panel.station-experience[data-section-id="projects"] .project-volume h4 {
+  font:
+    700 24px Georgia,
+    serif;
+  color: #fff0d4;
+}
+.panel.station-experience[data-section-id="projects"]
+  .project-volume
+  .content-status {
+  background: none;
+  color: #f1d6a3;
+  padding: 0;
+  font-size: 11px;
+}
+.lower-shelf {
+  min-height: 125px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+/* Interests sit around a reactor core, rather than in rows or tiles. */
+.panel.station-experience[data-section-id="interests"] {
+  --experience-bg: #0d262e;
+  --experience-ink: #b5efdf;
+  --experience-line: #28636a;
+  background: radial-gradient(circle at 50% 45%, #174b50, #0d262e 70%);
+  border: 3px solid #28636a;
+  border-radius: 35px 12px 35px 12px;
+}
+.reactor-chamber {
+  position: relative;
+  height: 295px;
+}
+.panel.station-experience .reactor-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: 140px;
+  border: 1px solid #409f99;
+  border-radius: 999px;
+  background: #10363d;
+  color: #b5efdf;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.panel.station-experience .reactor-node[aria-pressed="true"] {
+  background: #b5efdf;
+  color: #10363d;
+}
+.reactor-readout {
+  border-top: 1px solid #28636a;
+  padding: 12px;
+  text-align: center;
+  min-height: 42px;
+  font-size: 13px;
+}
+
+/* Contact uses an app screen inside a purple titanium handset. */
+.panel.station-experience[data-section-id="contact"] {
+  --experience-bg: #ece6ff;
+  --experience-ink: #38285f;
+  --experience-line: #b7a6d8;
+  width: 350px;
+  border: 6px solid #53426c;
+  border-radius: 38px;
+  padding: 25px 19px 20px;
+  background: linear-gradient(145deg, #f8efff, #d6dcfa);
+}
+.phone-status {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-align: right;
+  opacity: 0.7;
+}
+.contact-screen {
+  text-align: center;
+  padding-top: 15px;
+}
+.contact-avatar {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #7363a9;
+  color: #fff;
+  font:
+    700 23px Manrope,
+    sans-serif;
+  box-shadow: 0 5px 20px #7363a933;
+}
+.panel.station-experience[data-section-id="contact"] .content-contact {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 10px 0;
+}
+.panel.station-experience[data-section-id="contact"] .content-contact h4 {
+  color: #38285f;
+}
+.panel.station-experience[data-section-id="contact"] .content-link {
+  background: #fff9;
+  color: #38285f;
+  border: 0;
+  border-radius: 22px;
+  margin: auto;
+}
+.panel.station-experience[data-section-id="contact"] .content-links {
+  justify-content: center;
+}
+.panel.station-experience[data-section-id="contact"] .phone-action {
+  background: #7363a9;
+  border: 0;
+  border-radius: 22px;
+  width: 100%;
+}
+.screen-awake .contact-avatar {
+  box-shadow: 0 0 25px #7363a999;
+}
+
+@media (max-width: 600px) {
+  .panel.station-experience[data-section-id] {
+    width: 560px;
+    max-height: 640px;
+  }
+  .panel.station-experience[data-section-id="contact"] {
+    width: 350px;
+  }
+  .panel.station-experience[data-section-id="education"] {
+    width: 620px;
+  }
+}

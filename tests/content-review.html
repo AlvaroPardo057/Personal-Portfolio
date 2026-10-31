@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio station content preview</title>
+    <style>
+      body.content-review {
+        overflow: auto;
+        padding: 28px;
+      }
+      #content-preview {
+        max-width: 900px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+        gap: 24px;
+        align-items: start;
+      }
+      #content-preview .panel {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="content-review">
+    <main id="content-preview" aria-label="Station content preview"></main>
+    <script type="module" src="./content-review.js"></script>
+  </body>
+</html>

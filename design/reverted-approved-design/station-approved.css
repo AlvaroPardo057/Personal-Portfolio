@@ -1,0 +1,357 @@
+/* Approved art direction: generated scenery under real, accessible HTML controls. */
+.panel.approved-scenes.station-experience[data-section-id] {
+  width: 620px;
+  max-height: 720px;
+  padding: 24px;
+  border-radius: 18px;
+  background-repeat: no-repeat;
+  box-shadow:
+    0 24px 60px #13202755,
+    inset 0 0 0 1px #ffffff22;
+}
+.panel.approved-scenes .panel-header {
+  text-shadow: 0 2px 8px #0008;
+}
+.panel.approved-scenes .panel-header h2 {
+  font-size: 32px;
+}
+.panel.approved-scenes .panel-masthead {
+  opacity: 0.8;
+}
+.panel.approved-scenes .panel-related {
+  flex-shrink: 0;
+  padding: 12px 0 0;
+}
+.panel.approved-scenes .related-link {
+  backdrop-filter: blur(5px);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.panel.approved-scenes .related-link:hover {
+  transform: translateY(-2px);
+}
+
+.panel.approved-scenes.station-experience[data-section-id="about-me"] {
+  background: linear-gradient(#1b202b, #151923);
+}
+.panel.approved-scenes .circuit-map {
+  height: 340px;
+  margin: 0 -24px;
+  background: url("/station-scenes/circuit.png") center / 100% 100% no-repeat;
+}
+.panel.approved-scenes .circuit-map .experience-drawing {
+  display: none;
+}
+.panel.approved-scenes .track-stop {
+  width: auto;
+  height: auto;
+  min-height: 32px;
+  max-width: 145px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 9px 4px 4px;
+  background: #171d25df;
+  border: 1px solid #f5655580;
+  border-radius: 22px;
+  box-shadow: 0 3px 12px #0008;
+  backdrop-filter: blur(6px);
+}
+.stop-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff6656;
+  color: #171d25;
+}
+.stop-name {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: left;
+}
+.panel.approved-scenes .track-stop[aria-pressed="true"] {
+  background: #a42e25e8;
+  color: #fff;
+  border-color: #ff978b;
+}
+.panel.approved-scenes .track-information {
+  padding: 10px 15px;
+  margin-top: 13px;
+  border-left: 2px solid #ff6656;
+  background: #252b3544;
+  min-height: 125px;
+}
+.panel.approved-scenes .track-information p {
+  font-size: 13px;
+}
+
+.panel.approved-scenes.station-experience[data-section-id="interests"] {
+  background:
+    linear-gradient(180deg, #092026ed, #09202622 25%, #09202611 65%, #092026ed),
+    url("/station-scenes/reactor.png") center / cover;
+  border: 1px solid #46d9c450;
+}
+.panel.approved-scenes .reactor-chamber {
+  height: 365px;
+}
+.panel.approved-scenes .reactor-chamber .experience-drawing {
+  display: none;
+}
+.panel.approved-scenes .reactor-node {
+  border-radius: 10px;
+  border: 1px solid #46d9c4;
+  background: #052a32ce;
+  box-shadow:
+    0 0 13px #00b3bb44,
+    inset 0 0 10px #46d9c411;
+  color: #efffff;
+  padding: 11px 13px;
+  font-size: 12px;
+  backdrop-filter: blur(8px);
+}
+.panel.approved-scenes .reactor-node:hover {
+  box-shadow: 0 0 20px #00b3bb88;
+}
+.panel.approved-scenes .reactor-readout {
+  background: #052a32d9;
+  border: 1px solid #46d9c433;
+  border-radius: 8px;
+  margin-top: 8px;
+  backdrop-filter: blur(6px);
+}
+
+.panel.approved-scenes.station-experience[data-section-id="projects"] {
+  background:
+    linear-gradient(
+      180deg,
+      #28170eaa,
+      transparent 30%,
+      transparent 72%,
+      #28170ecc
+    ),
+    url("/station-scenes/library.png") center / 100% 100%;
+  border: 1px solid #b5814e60;
+}
+.panel.approved-scenes .library-introduction {
+  text-shadow: 0 1px 6px #000;
+}
+.panel.approved-scenes .library-shelves {
+  background: transparent;
+  padding: 0;
+}
+.panel.approved-scenes .project-shelf {
+  min-height: 300px;
+  border: 0;
+  box-shadow: none;
+  padding: 0 20px 0 42%;
+}
+.panel.approved-scenes .decorative-spine {
+  display: none;
+}
+.panel.approved-scenes .lower-shelf {
+  display: block;
+  min-height: 80px;
+  padding: 0;
+}
+.panel.approved-scenes.station-experience[data-section-id="projects"]
+  .project-volume {
+  min-height: 235px;
+  max-width: 205px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(100deg, #346473, #204655 70%, #102d39);
+  border-left: 8px solid #bf9c57;
+  border-right: 5px solid #e8d5af;
+  border-radius: 3px 7px 7px 3px;
+  box-shadow:
+    inset 0 0 0 1px #cca96666,
+    8px 7px 18px #0008;
+}
+.panel.approved-scenes .project-volume h4 {
+  margin-top: 14px;
+}
+.panel.approved-scenes .project-volume .content-status {
+  line-height: 1.6;
+}
+
+.panel.approved-scenes.station-experience[data-section-id="education"] {
+  width: 680px;
+  background:
+    linear-gradient(
+      180deg,
+      #261910bb,
+      transparent 21%,
+      transparent 80%,
+      #26191099
+    ),
+    url("/station-scenes/education.png") center / 100% 100%;
+  border-radius: 13px;
+  padding: 24px 30px;
+}
+.panel.approved-scenes .open-book {
+  min-height: 360px;
+  padding: 0 10px;
+}
+.panel.approved-scenes .book-page {
+  padding: 50px 24px 35px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  color: #543b26;
+}
+.panel.approved-scenes .page-left {
+  padding-right: 32px;
+}
+.panel.approved-scenes .page-right {
+  padding-left: 32px;
+}
+.panel.approved-scenes .book-page .experience-caption {
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+.panel.approved-scenes.station-experience[data-section-id="education"]
+  .content-card
+  h4 {
+  font-size: 25px;
+}
+.panel.approved-scenes .book-page .note-details {
+  font-size: 11px;
+}
+.panel.approved-scenes .book-page .personal-note label {
+  font-size: 11px;
+}
+.panel.approved-scenes .book-page .content-meta {
+  color: #81654b;
+}
+.panel.approved-scenes .page-number {
+  bottom: 20px;
+}
+
+.panel.approved-scenes.station-experience[data-section-id="hobbies"] {
+  background: linear-gradient(#cbeaff, #edf7e6);
+  border-radius: 20px;
+}
+.panel.approved-scenes[data-section-id="hobbies"] .panel-header {
+  text-shadow: none;
+}
+.panel.approved-scenes .stage-introduction {
+  font-size: 12px;
+  margin: 5px 0 10px;
+}
+.panel.approved-scenes .stage-profile {
+  height: 335px;
+  margin: 0 -24px;
+  background: url("/station-scenes/mountains.png") center / 100% 100% no-repeat;
+}
+.panel.approved-scenes .summit {
+  gap: 2px;
+  z-index: 2;
+}
+.panel.approved-scenes .summit strong {
+  background: #ffffffe6;
+  color: #254a39;
+  padding: 4px 9px;
+  border-radius: 15px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px #234c3922;
+}
+.panel.approved-scenes .summit-flag {
+  background: #ee9b30;
+  border-radius: 0 7px 7px 0;
+  font-size: 8px;
+}
+.panel.approved-scenes .elevation-profile {
+  height: 55px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+.panel.approved-scenes .stage-finish {
+  font-size: 8px;
+  padding-top: 3px;
+}
+
+.panel.approved-scenes.station-experience[data-section-id="contact"] {
+  --experience-ink: #fff4ed;
+  --experience-line: #d8bda466;
+  width: 420px;
+  min-height: 680px;
+  max-height: 760px;
+  padding: 24px 18px;
+  background:
+    linear-gradient(
+      180deg,
+      #251a1655,
+      transparent 22%,
+      transparent 84%,
+      #251a1666
+    ),
+    url("/station-scenes/phone.png") center / 100% 100%;
+  border: 0;
+  border-radius: 22px;
+}
+.panel.approved-scenes .world-contact {
+  height: 455px;
+  flex-shrink: 0;
+}
+.panel.approved-scenes .phone-status {
+  display: none;
+}
+.panel.approved-scenes .contact-screen {
+  width: 58%;
+  margin: 45px 0 0 35%;
+  padding-top: 0;
+  color: #38285f;
+  transform: rotate(5deg);
+  transform-origin: 50% 50%;
+}
+.panel.approved-scenes .contact-avatar {
+  width: 53px;
+  height: 53px;
+  font-size: 20px;
+}
+.panel.approved-scenes .contact-screen p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.panel.approved-scenes.station-experience[data-section-id="contact"]
+  .content-contact {
+  padding: 6px 0;
+}
+.panel.approved-scenes.station-experience[data-section-id="contact"]
+  .content-contact
+  h4 {
+  font-size: 15px;
+  margin: 0;
+}
+.panel.approved-scenes.station-experience[data-section-id="contact"]
+  .content-link {
+  font-size: 11px;
+  padding: 8px 10px;
+}
+.panel.approved-scenes.station-experience[data-section-id="contact"]
+  .phone-action {
+  font-size: 10px;
+  width: 110%;
+  margin: 94px 0 0 -18%;
+  padding: 10px 8px;
+  background: #ece4ffbb;
+  color: #4f397c;
+  box-shadow: 0 4px 10px #47316322;
+}
+
+@media (max-width: 600px) {
+  .panel.approved-scenes.station-experience[data-section-id] {
+    width: 600px;
+  }
+  .panel.approved-scenes.station-experience[data-section-id="education"] {
+    width: 680px;
+  }
+  .panel.approved-scenes.station-experience[data-section-id="contact"] {
+    width: 420px;
+  }
+}
