@@ -29,6 +29,12 @@ To use the existing preview address, run `npm run dev -- --port 5175 --strictPor
 
 WASD / arrows move, drag rotates, wheel changes camera distance. Touch users have a movement joystick and drag-to-look. Move close to reveal a landmark; nothing happens when you click a sculpture. The circular park boundary and sculpture/garden/bench collisions apply to both characters.
 
+## GitHub Pages deployment
+
+In the repository settings, open **Pages** and select **GitHub Actions** as the source. Push `.github/workflows/deploy-pages.yml`, `vite.config.js`, `index.html`, `pnpm-lock.yaml`, and `pnpm-workspace.yaml` to `main`. The workflow installs dependencies with pnpm, runs the tests, builds `dist/`, and publishes it at https://alvaropardo057.github.io/Personal-Portfolio/. Subsequent pushes to `main` deploy automatically.
+
+The workflow sets `VITE_BASE_PATH=/Personal-Portfolio/` so asset URLs and the home link include the repository path. Local development and builds without that variable continue to use `/`. If you rename the repository, update the workflow path. Deployment progress and errors appear in the repository's **Actions** tab.
+
 ## Content and backend integration
 
 Edit `src/portfolio-data.js` for section copy, groups and entities. `src/content.js` maps the content to the six objects; `src/section-components.js` renders reusable native HTML inside their front panels. Unprovided details stay empty or explicitly marked as hidden placeholders. Related-section buttons ask the existing guide to lead visitors to another station. Optional images and external links can be added through data. CSS3D and WebGL are separate render layers; HTML has no pixel-perfect occlusion behind 3D geometry.
